@@ -1,0 +1,168 @@
+@import "../../../styles/colors.scss";
+
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
+  position: relative;
+  background-color: #17a2b8;
+  color: white;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/assets/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    z-index: 1;
+  }
+
+  .hero-des {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    h1 {
+      padding: 3rem;
+      font-weight: 500;
+      margin-top: -3rem;
+      text-align: center;
+      font-size: 5vw;
+      span {
+        color: #00394f;
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+      width: 45rem;
+      padding: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: justify;
+      margin-top: 2rem;
+      text-transform: capitalize;
+      line-height: 25px;
+      span {
+        font-weight: 700;
+        color: #d1ebf6;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 5rem;
+    .hero-des {
+      h1 {
+        font-size: 4rem;
+        padding: 2rem;
+      }
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        width: 35rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 4rem 2rem;
+
+    .hero-des {
+      h1 {
+        font-size: 3.5rem;
+        padding: 1.5rem;
+      }
+      h3 {
+        font-size: 1.8rem;
+      }
+      p {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 1rem;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+/* Landscape iPad (wider screens but still considered tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    padding: 6rem 4rem; /* Adjust padding for landscape mode */
+    .hero-image {
+      height: 30rem;
+      width: 45rem;
+      img {
+        height: 15rem;
+        width: auto;
+      }
+    }
+
+    .hero-des {
+      h1 {
+        font-size: 4rem; /* Slightly larger for landscape */
+        padding: 2rem;
+      }
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        width: 90%; /* Wider text for landscape */
+        font-size: 1rem;
+        padding: 1.2rem;
+      }
+    }
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .hero {
+    padding: 0 1.5rem;
+    .hero-image {
+      height: 10rem;
+      width: 100%;
+      img {
+        height: 10rem;
+      }
+    }
+
+    .hero-des {
+      h1 {
+        font-size: 2.5rem;
+        padding: 1rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        width: 100%;
+        font-size: 0.85rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

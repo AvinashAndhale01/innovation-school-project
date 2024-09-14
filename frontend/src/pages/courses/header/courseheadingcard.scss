@@ -1,0 +1,29 @@
+.courseheadingcard {
+  padding: 12px 18px;
+  background-color: #17a2b8;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 20px 30px;
+  .course-head {
+    p {
+      font-size: 15px;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #066a92;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .courseheadingcard {
+    padding: 16px 12px;
+    margin: 20px 9px;
+    .course-head {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
