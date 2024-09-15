@@ -138,6 +138,7 @@ const AddNewCourse = () => {
                 handleChange("about", e.target.value, setReqBody)
               }
             />
+            {console.log(reqBody.paymentUrl)}
           </Form.Item>
           <Form.Item label="Course Image">
             <Upload

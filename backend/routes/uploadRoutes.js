@@ -1,12 +1,10 @@
-const express = require("express")
-const verifyToken = require("../middlewer/authMiddlwer")
-const {uploading} = require("../controller/uploadController")
-const uploader = require("../middlewer/uploadMiddleware")
+const express = require("express");
+const verifyToken = require("../middlewer/authMiddlwer");
+const { uploading } = require("../controller/uploadController");
+const uploader = require("../middlewer/uploadMiddleware");
 
-const upload = express.Router()
+const upload = express.Router();
 
-upload.post("/", verifyToken ,uploader.single('file'), uploading);
+upload.post("/", verifyToken, uploader.single("file"), uploading);
 
-
-
-module.exports = upload
+module.exports = upload;
